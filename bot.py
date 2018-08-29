@@ -48,9 +48,13 @@ async def grab(ctx, habbo):
         else:
             status = ("De gebruiker is onzichtbaar")
         await bot.say(f"**Gegevens van de Habbo:**\n **Habbonaam:** {naamio}\n **Motto:** {motto}\n **Lid sinds:** {lidsince}\n **Zichtbaarheid:** {status}")
-        embed = discord.Embed(title="Hier zijn alle gegevens van de opgevraagde Habbo:", colour=discord.Colour(0xe9d166), timestamp=datetime.datetime.utcfromtimestamp(1535548044))
-        embed.set_thumbnail(url=f"https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}")
-
+        embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xdee236)
+        embed.set_thumbnail(url="https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user=Mohagames205&headonly=0&direction=2&head_direction=2&action=&gesture=&size=m")
+        embed.add_field(name="Naam:" , value=naamio, inline=True)
+        embed.add_field(name="Motto:", value=motto, inline=True)
+        embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
+        embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
+        embed.set_footer(text="Made by Mohagames205")
         await bot.say(embed=embed)
 	
 	
