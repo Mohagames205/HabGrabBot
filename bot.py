@@ -13,7 +13,7 @@ import urllib.request, json
 #tijd1 = datetime.datetime.now().strftime("%c")
 cp = '$'
 bot = commands.Bot(command_prefix=cp)
-
+bot.remove_command("help")
 print ('Bot is aan het laden...')
 print ('.....')
 print ('Het laden is bijna compleet!')
@@ -28,7 +28,6 @@ print ('Nieuwe logo en naam')
 @bot.event
 async def on_ready():
     await bot.edit_profile(username="HabGrab")
-    await bot.remove_command("help")
     #await bot.change_presence(game=discord.Game(name='Use {}help | Aardappelen'.format(cp)))
     print('Bot is geladen als')
     print(bot.user.name)
