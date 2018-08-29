@@ -70,6 +70,7 @@ async def info(ctx):
 	embed.add_field(name="Creator", value="Deze discord bot is gemaakt door @Mohagames#7389", inline=False)
 	embed.add_field(name="Programmeertaal", value="Discord.py 0.16.12", inline=False)
 	embed.add_field(name="Githubpagina", value="https://github.com/Mohagames205/HabGrabBot", inline=False)
+	embed.add_field(name="Invitelink", value="https://discordapp.com/oauth2/authorize?client_id=349200626955321354&scope=bot&permissions=1024", inline=False)
 	embed.set_footer(text="Powered by HabGrab ")
 	await bot.say(embed=embed)
 	
