@@ -64,8 +64,18 @@ async def grab(ctx, habbo):
 		await bot.say(embed=embed)
 	
 @bot.command(pass_context = True)
+async def info(ctx):
+	embed=discord.Embed(title="HabGrab info", description="Alle informatie die je zou willen weten over HabGrab", color=0xffff00)
+	embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
+	embed.add_field(name="Creator", value="Deze discord bot is gemaakt door @Mohagames#7389", inline=False)
+	embed.add_field(name="Programmeertaa"l, value="Discord.py 0.16.12", inline=False)
+	embed.add_field(name="Githubpagina", value="https://github.com/Mohagames205/HabGrabBot", inline=False)
+	embed.set_footer(text="Powered by HabGrab ")
+	await bot.say(embed=embed)
+	
+@bot.command(pass_context = True)
 async def help(ctx):
-	embed=discord.Embed(title="Er zijn intotaal 2 commands", color=0xffff00)
+	embed=discord.Embed(title="Er zijn intotaal 3 commands", color=0xffff00)
 	embed.add_field(name="$grab (habbonaam)", value="Geeft informatie over de gebruiker die je opzoekt.")
 	embed.add_field(name="$help", value="Geeft je alle verschillende commands")
 	embed.add_field(name="$info", value="Geeft info over de bot")
