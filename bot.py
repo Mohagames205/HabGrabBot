@@ -37,25 +37,28 @@ async def on_ready():
 	
 @bot.command(pass_context = True)
 async def grab(ctx, habbo):
-    with urllib.request.urlopen(f"https://www.habbo.nl/api/public/users?name={habbo}") as url:
-        data = json.loads(url.read().decode())
-        naamio = data['name']
-        motto = data['motto']
-        lidsince = data['memberSince']
-        status = data['profileVisible']
-        if status == True:
-            status = ("De gebruiker is zichtbaar")
-        else:
-            status = ("De gebruiker is onzichtbaar")
-			
-        embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xdee236)
-        embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
-        embed.add_field(name="Naam:" , value=naamio, inline=True)
-        embed.add_field(name="Motto:", value=motto, inline=True)
-        embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
-        embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
-        embed.set_footer(text="Made by Mohagames205")
-        await bot.say(embed=embed)
+	try:
+		with urllib.request.urlopen(f"https://www.habbo.nl/api/public/users?name={habbo}") as url:
+			data = json.loads(url.read().decode())
+			naamio = data['name']
+			motto = data['motto']
+			lidsince = data['memberSince']
+			status = data['profileVisible']
+			if status == True:
+				status = ("De gebruiker is zichtbaar")
+			else:
+				status = ("De gebruiker is onzichtbaar")
+				
+			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xdee236)
+			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
+			embed.add_field(name="Naam:" , value=naamio, inline=True)
+			embed.add_field(name="Motto:", value=motto, inline=True)
+			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
+			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
+			embed.set_footer(text="Made by Mohagames205")
+			await bot.say(embed=embed)
+	except:
+		await bot.say("De gebruiker bestaat niet")
 	
 	
 
