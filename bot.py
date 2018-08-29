@@ -66,6 +66,7 @@ async def grab(ctx, habbo):
 	
 @bot.command(pass_context = True)
 async def help(ctx):
+	await bot.say("Deze command is nog in onderhoud")
 	embed=discord.Embed(title="Help", description="Hier zie je alle botcommands", color=0xffff00)
 	embed.add_field(name="$grab", value="Zoekt gebruikers op op Habbo", inline=True)
 	embed.set_footer(text="Made by Mohagames205")
