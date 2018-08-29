@@ -55,12 +55,12 @@ async def grab(ctx, habbo):
 			embed.add_field(name="Motto:", value=motto, inline=True)
 			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
 			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
-			embed.set_footer(text="Made by Mohagames205")
+			embed.set_footer(text="Powered by HabGrab ©")
 			await bot.say(embed=embed)
 	except:
 		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xffff00)
 		embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
-		embed.set_footer(text="Made by Mohagames205")
+		embed.set_footer(text="Powered by HabGrab ©")
 		await bot.say(embed=embed)
 	
 @bot.command(pass_context = True)
@@ -68,9 +68,11 @@ async def help(ctx):
 	embed=discord.Embed(title="Er zijn intotaal 2 commands", color=0xffff00)
 	embed.add_field(name="$grab (habbonaam)", value="Geeft informatie over de gebruiker die je opzoekt.")
 	embed.add_field(name="$help", value="Geeft je alle verschillende commands")
+	embed.add_field(name="$info", value="Geeft info over de bot")
 	embed.add_field(name="Vragen over de bot?", value="Contacteer @Mohagames#7389 voor hulp en antwoorden op je vragen.")
 	embed.add_field(name="Discord server:", value="https://discord.gg/TZjtPk2")
-	embed.set_footer(text="Made by Mohagames205")
+	embed.add_field(name="Github pagina:", value="https://github.com/Mohagames205/HabGrabBot")
+	embed.set_footer(text="Powered by HabGrab ©")
 	await bot.say(embed=embed)
 
 bot.run(os.getenv('TOKEN'))
