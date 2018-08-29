@@ -8,27 +8,15 @@ import os
 import datetime
 import traceback
 import urllib.request, json
-#tijd = int(time.strftime("%M"))
-#tijd1 = str(time.strftime("%c"))
-#tijd1 = datetime.datetime.now().strftime("%c")
 cp = '$'
 bot = commands.Bot(command_prefix=cp)
 bot.remove_command("help")
 print ('Bot is aan het laden...')
-print ('.....')
-print ('Het laden is bijna compleet!')
-print ('Bij errors exit invoeren in console!')
-print ('De command prefix die wordt gebruikt is ' + cp)
-print ('...')
-print ('...')
-print ('We zijn er bijna!')
-print ('Ter info! De bot is niet bedoeld als U-bot maar als Discord Bot')
-print ('Versie 1.3')
-print ('Nieuwe logo en naam')
+
 @bot.event
 async def on_ready():
     await bot.edit_profile(username="HabGrab")
-    #await bot.change_presence(game=discord.Game(name='Use {}help | Aardappelen'.format(cp)))
+    await bot.change_presence(game=discord.Game(name='Use {}help | HabGrab ©'.format(cp)))
     print('Bot is geladen als')
     print(bot.user.name)
     print(bot.user.id)
@@ -71,7 +59,7 @@ async def info(ctx):
 	embed.add_field(name="Programmeertaal", value="Discord.py 0.16.12", inline=False)
 	embed.add_field(name="Githubpagina", value="https://github.com/Mohagames205/HabGrabBot", inline=False)
 	embed.add_field(name="Invitelink", value="https://discordapp.com/oauth2/authorize?client_id=349200626955321354&scope=bot&permissions=1024", inline=False)
-	embed.set_footer(text="Powered by HabGrab ")
+	embed.set_footer(text="Powered by HabGrab ©")
 	await bot.say(embed=embed)
 	
 @bot.command(pass_context = True)
