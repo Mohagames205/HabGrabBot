@@ -49,7 +49,7 @@ async def grab(ctx, habbo):
 			else:
 				status = ("De gebruiker is onzichtbaar")
 				
-			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xdee236)
+			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xffff00)
 			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
 			embed.add_field(name="Naam:" , value=naamio, inline=True)
 			embed.add_field(name="Motto:", value=motto, inline=True)
@@ -58,7 +58,7 @@ async def grab(ctx, habbo):
 			embed.set_footer(text="Made by Mohagames205")
 			await bot.say(embed=embed)
 	except:
-		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xe2da36)
+		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xffff00)
 		embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
 		embed.set_footer(text="Made by Mohagames205")
 		await bot.say(embed=embed)
