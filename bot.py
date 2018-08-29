@@ -65,7 +65,7 @@ async def info(ctx):
 @bot.command(pass_context = True)
 async def help(ctx):
 	embed=discord.Embed(title="Er zijn intotaal 3 commands", color=0xffff00)
-	embed.add_field(name="$grab (habbonaam)", value="Geeft informatie over de gebruiker die je opzoekt.")
+	embed.add_field(name="$grab (habbonaam)", value="Geeft informatie over de gebruiker")
 	embed.add_field(name="$help", value="Geeft je alle verschillende commands")
 	embed.add_field(name="$info", value="Geeft info over de bot")
 	embed.add_field(name="Vragen over de bot?", value="Contacteer @Mohagames#7389 voor hulp en antwoorden op je vragen.")
