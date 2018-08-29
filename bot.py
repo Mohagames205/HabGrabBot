@@ -65,7 +65,6 @@ async def grab(ctx, habbo):
 	
 @bot.command(pass_context = True)
 async def help(ctx):
-	await bot.say("Deze command is nog in onderhoud")
 	embed=discord.Embed(title="Er zijn intotaal 2 commands", color=0xffff00)
 	embed.add_field(name="$grab (habbonaam)", value="Geeft informatie over de gebruiker die je opzoekt.")
 	embed.add_field(name="$help", value="Geeft je alle verschillende commands")
