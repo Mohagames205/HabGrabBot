@@ -47,10 +47,8 @@ async def grab(ctx, habbo):
             status = ("De gebruiker is zichtbaar")
         else:
             status = ("De gebruiker is onzichtbaar")
-        await bot.say(f" "+ "**Habbonaam:** {naamio}\n **Motto:** {motto}\n **Lid sinds:** {lidsince}\n **Zichtbaarheid:** {status}")
+        await bot.say(f"**Gegevens van de Habbo:**\n**Habbonaam:** {naamio}\n **Motto:** {motto}\n **Lid sinds:** {lidsince}\n **Zichtbaarheid:** {status}")
 	
-
-
 	
 
 bot.run(os.getenv('TOKEN'))
