@@ -47,7 +47,6 @@ async def grab(ctx, habbo):
 			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
 			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
 			embed.set_footer(text="Powered by HabGrab ©")
-			await bot.send_file(channel, "gabbo.png", content="Habbo", filename="Habbo1")
 			await bot.say(embed=embed)
 	except:
 		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xffff00)
