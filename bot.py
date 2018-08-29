@@ -39,7 +39,7 @@ async def grab(ctx, habbo):
 				
 			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xffff00)
 			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
-			embed.add_field(name="Naam:" , value=naamio, inline=False)
+			embed.add_field(name="Naam:" , value=naamio, inline=True)
 			embed.add_field(name="Motto:", value=motto, inline=True)
 			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
 			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
