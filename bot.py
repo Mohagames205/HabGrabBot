@@ -53,4 +53,4 @@ async def grab(ctx, habbo):
 
 	
 
-bot.run("")
+bot.run(os.getenv('TOKEN'))
