@@ -68,10 +68,10 @@ async def help(ctx):
 	embed=discord.Embed(title="Er zijn intotaal 2 commands", color=0xffff00)
 	embed.add_field(name="$grab (habbonaam)", value="Geeft informatie over de gebruiker die je opzoekt.")
 	embed.add_field(name="$help", value="Geeft je alle verschillende commands")
-	embed.add_field(name="$info", value="Geeft info over de bot")
+	embed.add_field(name="$info", value="Geeft info over de bot", inline=True)
 	embed.add_field(name="Vragen over de bot?", value="Contacteer @Mohagames#7389 voor hulp en antwoorden op je vragen.")
-	embed.add_field(name="Discord server:", value="https://discord.gg/TZjtPk2")
-	embed.add_field(name="Github pagina:", value="https://github.com/Mohagames205/HabGrabBot")
+	embed.add_field(name="Discord server:", value="https://discord.gg/TZjtPk2", inline=True)
+	embed.add_field(name="Github pagina:", value="https://github.com/Mohagames205/HabGrabBot", inline=True)
 	embed.set_footer(text="Powered by HabGrab ©")
 	await bot.say(embed=embed)
 
