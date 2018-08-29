@@ -58,7 +58,10 @@ async def grab(ctx, habbo):
 			embed.set_footer(text="Made by Mohagames205")
 			await bot.say(embed=embed)
 	except:
-		await bot.say("De gebruiker bestaat niet")
+		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xe2da36)
+		embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
+		embed.set_footer(text="Made by Mohagames205")
+		await bot.say(embed=embed)
 	
 	
 
