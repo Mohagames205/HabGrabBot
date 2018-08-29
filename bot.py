@@ -41,8 +41,8 @@ async def grab(ctx, habbo):
 			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
 			embed.add_field(name="Naam:" , value=naamio, inline=False)
 			embed.add_field(name="Motto:", value=motto, inline=False)
-			embed.add_field(name="Lid sinds:" , value=lidsince, inline=False)
-			embed.add_field(name="Zichtbaarheid:" , value=status, inline=False)
+			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
+			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
 			embed.set_footer(text="Powered by HabGrab ©")
 			await bot.say(embed=embed)
 	except:
