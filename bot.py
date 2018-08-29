@@ -64,6 +64,11 @@ async def grab(ctx, habbo):
 		embed.set_footer(text="Made by Mohagames205")
 		await bot.say(embed=embed)
 	
-	
+@bot.command(pass_context = True)
+async def help(ctx):
+	embed=discord.Embed(title="Help", description="Hier zie je alle botcommands", color=0xffff00)
+	embed.add_field(name="$grab", value="Zoekt gebruikers op op Habbo", inline=True)
+	embed.set_footer(text="Made by Mohagames205")
+	await bot.say(embed=embed)
 
 bot.run(os.getenv('TOKEN'))
