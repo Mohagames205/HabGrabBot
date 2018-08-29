@@ -28,7 +28,7 @@ print ('Nieuwe logo en naam')
 @bot.event
 async def on_ready():
     await bot.edit_profile(username="HabGrab")
-	bot.remove_command("help")
+    bot.remove_command("help")
     #await bot.change_presence(game=discord.Game(name='Use {}help | Aardappelen'.format(cp)))
     print('Bot is geladen als')
     print(bot.user.name)
