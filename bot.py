@@ -51,6 +51,7 @@ async def grab(ctx, habbo):
 			embed.add_field(name="Motto:", value=motto, inline=True)
 			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
 			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
+			embed.set_image(url="/gabbo.jpg")
 			embed.set_footer(text="Powered by HabGrab ©")
 			channel = ctx.message.channel
 			await bot.say(embed=embed)
