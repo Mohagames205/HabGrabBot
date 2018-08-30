@@ -27,36 +27,30 @@ async def on_ready():
 	
 @bot.command(pass_context = True)
 async def grab(ctx, habbo):
-	try:
-		with urllib.request.urlopen(f"https://www.habbo.nl/api/public/users?name={habbo}") as url:
-			data = json.loads(url.read().decode())
-			naamio = data['name']
-			motto = data['motto']
-			lidsince = data['memberSince']
-			status = data['profileVisible']
-			if status == True:
-				status = ("De gebruiker is zichtbaar")
-			else:
-				status = ("De gebruiker is onzichtbaar")
-				
-			urllib.request.urlretrieve(f"https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}", "gabbo.jpg")
-			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xffff00)
-			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
-			embed.add_field(name="Naam:" , value=naamio, inline=True)
-			embed.add_field(name="Motto:", value=motto, inline=True)
-			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
-			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
-			embed.set_footer(text="Powered by HabGrab ©")
-			channel = ctx.message.channel
-			await bot.say(embed=embed)
-			print("Foto verzonden")
-			await bot.send_file(channel, "gabbo.jpg", content="Avatar:", filename="gabbo.jpg")
-	except:
-		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xffff00)
-		print("Error")
+	with urllib.request.urlopen(f"https://www.habbo.nl/api/public/users?name={habbo}") as url:
+		data = json.loads(url.read().decode())
+		naamio = data['name']
+		motto = data['motto']
+		lidsince = data['memberSince']
+		status = data['profileVisible']
+		if status == True:
+			status = ("De gebruiker is zichtbaar")
+		else:
+			status = ("De gebruiker is onzichtbaar")
+			
+		urllib.request.urlretrieve(f"https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}", "gabbo.jpg")
+		embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xffff00)
 		embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
+		embed.add_field(name="Naam:" , value=naamio, inline=True)
+		embed.add_field(name="Motto:", value=motto, inline=True)
+		embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
+		embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
 		embed.set_footer(text="Powered by HabGrab ©")
+		channel = ctx.message.channel
 		await bot.say(embed=embed)
+		print("Foto verzonden")
+		await bot.send_file(channel, "gabbo.jpg", content="Avatar:", filename="gabbo.jpg")
+
 	
 @bot.command(pass_context = True)
 async def info(ctx):
