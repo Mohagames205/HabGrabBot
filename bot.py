@@ -47,11 +47,11 @@ async def grab(ctx, habbo):
 			urllib.request.urlretrieve(f"https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}", "gabbo.jpg")
 			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xffff00)
 			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
+			embed.set_image(url="https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}")
 			embed.add_field(name="Naam:" , value=naamio, inline=True)
 			embed.add_field(name="Motto:", value=motto, inline=True)
 			embed.add_field(name="Lid sinds:" , value=lidsince, inline=True)
 			embed.add_field(name="Zichtbaarheid:" , value=status, inline=True)
-			embed.set_image(url="https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}")
 			embed.set_footer(text="Powered by HabGrab ©")
 			channel = ctx.message.channel
 			await bot.say(embed=embed)
