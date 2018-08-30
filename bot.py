@@ -39,6 +39,11 @@ async def grab(ctx, habbo):
 			else:
 				status = ("De gebruiker is onzichtbaar")
 				
+			if motto == None:
+				motto = ("Geen")
+			else:
+				motto = motto
+			
 			urllib.request.urlretrieve(f"https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}", "gabbo.jpg")
 			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xffff00)
 			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
