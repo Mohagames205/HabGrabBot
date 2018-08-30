@@ -39,7 +39,7 @@ async def grab(ctx, habbo):
 			else:
 				status = ("De gebruiker is onzichtbaar")
 				
-			#urllib.request.urlretrieve(f"https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}", "gabbo.jpg")
+			urllib.request.urlretrieve(f"https://www.habbo.nl/habbo-imaging/avatarimage?hb=image&user={habbo}", "gabbo.jpg")
 			embed=discord.Embed(title="Hier zijn de gegevens van de opgevraagde Habbo: ", color=0xffff00)
 			embed.set_thumbnail(url="http://justcakenl.tk/host/events.gif")
 			embed.add_field(name="Naam:" , value=naamio, inline=True)
@@ -50,7 +50,7 @@ async def grab(ctx, habbo):
 			channel = ctx.message.channel
 			await bot.say(embed=embed)
 			print("Foto verzonden")
-			#await bot.send_file(channel, "gabbo.jpg", content="Avatar:", filename="gabbo.jpg")
+			await bot.send_file(channel, "gabbo.jpg", content="Avatar:", filename="gabbo.jpg")
 	except:
 		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xffff00)
 		print("Error")
