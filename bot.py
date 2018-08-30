@@ -55,8 +55,8 @@ async def grab(ctx, habbo):
 			embed.set_footer(text="Powered by HabGrab ©")
 			channel = ctx.message.channel
 			await bot.say(embed=embed)
-			print("Foto verzonden")
-			await bot.send_file(channel, "gabbo.jpg", content="Avatar:", filename="gabbo.jpg")
+			#print("Foto verzonden")
+			#await bot.send_file(channel, "gabbo.jpg", content="Avatar:", filename="gabbo.jpg")
 	except:
 		embed=discord.Embed(title="Er is iets misgelopen", description="De gebruiker bestaat niet", color=0xffff00)
 		print("Error")
