@@ -39,7 +39,7 @@ async def grab(ctx, habbo):
 			else:
 				status = ("De gebruiker is onzichtbaar")
 				
-			if motto == None:
+			if motto == "":
 				motto = ("Geen")
 			else:
 				motto = motto
