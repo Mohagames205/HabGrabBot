@@ -124,4 +124,4 @@ async def friends(ctx, habbo):
 
 	embed.set_footer(text="Powered by HabGrab ©")
 	await bot.say(embed=embed)
-bot.run("")
+bot.run(os.environ.get("TOKEN"))
